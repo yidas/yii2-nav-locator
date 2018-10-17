@@ -1,0 +1,18 @@
+{
+    "name": "yidas/yii2-locator",
+    "description": "Current contorller route locator for navigation active identification for Yii2",
+    "keywords": ["yii", "yii2", "extension", "helper", "locator", "navigation"],
+    "homepage": "https://github.com/yidas/yii2-locator",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Tsai",
+            "email": "myintaer@gmail.com",
+            "homepage": "https://github.com/yidas"
+        }
+    ],
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
