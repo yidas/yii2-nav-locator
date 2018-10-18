@@ -1,0 +1,21 @@
+{
+    "name": "yidas/yii2-nav-locator",
+    "description": "Yii 2 Navigation Routing Locator for active menu identification",
+    "keywords": ["yii", "yii2", "extension", "helper", "locator", "navigation"],
+    "homepage": "https://github.com/yidas/yii2-locator",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Tsai",
+            "email": "myintaer@gmail.com",
+            "homepage": "https://github.com/yidas"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
