@@ -15,7 +15,7 @@ Yii 2 Navigation Routing Locator for active menu identification
 FEATURES
 --------
 
-- *Smartly **identifying active navigation** on current controller*
+- *Smartly **identifying active navigation** on current controller action*
 
 - *Multi-validators for **grouping active navigation***
 
@@ -90,10 +90,10 @@ use yii\helpers\Url;
 
 <img src="https://github.com/yidas/yii2-nav-locator/blob/master/img/demo_1-1.png" height="270" /> <img src="https://github.com/yidas/yii2-nav-locator/blob/master/img/demo_1-2.png" height="270" /> <img src="https://github.com/yidas/yii2-nav-locator/blob/master/img/demo_2-1.png" height="270" /> <img src="https://github.com/yidas/yii2-nav-locator/blob/master/img/demo_2-2.png" height="270" />
 
-- Example 1 Routes: `data/list`, `data/list/action`
-- Example 2 Routes: `data/structure-setting`, `data/structure-setting/action`
-- Example 3 Routes: `datacenters/list`, `datacenters/list/action`
-- Example 4 Routes: `datacenters/cluster-setting`, `datacenters/cluster-setting/action`
+- Example 1 active URI: `data/list`, `data/list/action`
+- Example 2 active URI: `data/structure-setting`, `data/structure-setting/action`
+- Example 3 active URI: `datacenters/list`, `datacenters/list/action`
+- Example 4 active URI: `datacenters/cluster-setting`, `datacenters/cluster-setting/action`
 
 Nav Locator even supports route rule mapping. If you have a rule `'test' => 'data/list'`, the Nav Locator could identify as in `data/list` when you enter with `test` route.
 
@@ -135,7 +135,7 @@ public static boolean is(string $route)
 
 *Example:*
 
-For `site/index` as current controller:
+For `site/index` as the current controller action route:
 
 ```php
 use yidas\NavLocator as Locator;
@@ -158,7 +158,7 @@ public static boolean in(string $route)
 
 *Example:*
 
-For `site/index` as current controller:
+For `site/index` as the current controller action route:
 
 ```php
 use yidas\NavLocator as Locator;
