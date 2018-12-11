@@ -165,13 +165,13 @@ Suppose `site/index` as the current controller action:
 ```php
 use yidas\NavLocator as Locator;
 
-Locator::in('site');            // True 
+Locator::in('site');            // True  (Current route `site/index` is indeed in `site` layer)
 Locator::in('site/');           // True 
-Locator::in('site/index');      // True 
+Locator::in('site/index');      // True  (Current route `site/index` is indeed the `site/index` layers)
 Locator::in('site/index/');     // True 
-Locator::in('site/other');      // False 
+Locator::in('site/other');      // False (Current route `site/index` is not in `site/other` layers)
 Locator::in('site/other/');     // False 
-Locator::in('si');              // False 
+Locator::in('si');              // False (Current route `site/index` is not in `si` layer, `site` != `si`)
 Locator::in('si/');             // False 
 ```
 
