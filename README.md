@@ -127,7 +127,7 @@ USAGE
 
 ### is()
 
-Validate current controller is completely matched giving controller route
+Validate current controller action is completely matched giving route
 
 ```php
 public static boolean is(string $route)
@@ -135,7 +135,7 @@ public static boolean is(string $route)
 
 *Example:*
 
-For `site/index` as the current controller action route:
+Suppose `site/index` as the current controller action:
 
 ```php
 use yidas\NavLocator as Locator;
@@ -148,9 +148,11 @@ Locator::is('site/other');      // False
 Locator::is('site/other/');     // False 
 ```
 
+> The giving route need to be defined precisely, the format is `module-ID/controller-ID/action-ID`.
+
 ### in()
 
-Validate current controller is under giving controller route
+Validate current controller action is under giving route
 
 ```php
 public static boolean in(string $route)
@@ -158,7 +160,7 @@ public static boolean in(string $route)
 
 *Example:*
 
-For `site/index` as the current controller action route:
+Suppose `site/index` as the current controller action:
 
 ```php
 use yidas\NavLocator as Locator;
