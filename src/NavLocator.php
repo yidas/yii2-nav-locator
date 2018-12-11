@@ -27,10 +27,10 @@ class NavLocator
     protected static $prefix = '';
 
     /**
-     * Get controller route
+     * Get current route
      *
      * @param int $depth Depth number separated by slash
-     * @return string Current controller route of Yii2
+     * @return string route of Yii2 (module ID/controller ID/action ID)
      */
     public static function get($depth=0)
     {
@@ -78,9 +78,11 @@ class NavLocator
     }
 
     /**
-     * Validate current controller is completely matched giving controller route
+     * Validate current controller action is completely matched giving route
+     * 
+     * The giving route need to be defined precisely, the format is `module-ID/controller-ID/action-ID`.
      *
-     * @param string $route Comparative controller route
+     * @param string $route Comparative route (module ID/controller ID/action ID)
      * @return boolean
      */
     public static function is($route)
@@ -91,9 +93,12 @@ class NavLocator
     }
 
     /**
-     * Validate current controller is under giving controller route
+     * Validate current controller action is under giving route
+     * 
+     * The giving route will divide into independent and precise route layers by each separator, 
+     * letting you distinguish whether the current controller action belongs to the parent navigation.
      *
-     * @param string $route Comparative controller route
+     * @param string $route Comparative route (module ID/controller ID/action ID)
      * @return boolean
      */
     public static function in($route)
