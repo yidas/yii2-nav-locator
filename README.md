@@ -173,6 +173,7 @@ Locator::in('site/other');      // False (Current route `site/index` is not in `
 Locator::in('site/other/');     // False 
 Locator::in('si');              // False (Current route `site/index` is not in `si` layer, `site` != `si`)
 Locator::in('si/');             // False 
+Locator::in('site/index/index');// False (This route means `site`  with `index` controller and `index` action)
 ```
 
 > The giving route will divide into independent and precise route layers by each separator, letting you distinguish whether the current controller action belongs to the parent navigation.
