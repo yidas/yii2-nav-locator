@@ -140,11 +140,11 @@ Suppose `site/index` as the current controller action:
 ```php
 use yidas\NavLocator as Locator;
 
-Locator::is('site');            // False 
-Locator::is('site/');           // False 
-Locator::is('site/index');      // True 
+Locator::is('site');            // False (Route `site` could not refer to a actual action)
+Locator::is('site/');           // False (There is no difference between using a slash or not)
+Locator::is('site/index');      // True  (Successfully match the same controller ID and same action ID)
 Locator::is('site/index/');     // True 
-Locator::is('site/other');      // False 
+Locator::is('site/other');      // False (Failed to match the same controller ID but the different action ID)
 Locator::is('site/other/');     // False 
 ```
 
@@ -174,6 +174,8 @@ Locator::in('site/other/');     // False
 Locator::in('si');              // False 
 Locator::in('si/');             // False 
 ```
+
+> The giving route will divide into independent and precise route layers by each separator, letting you distinguish whether the current controller action belongs to the parent navigation.
 
 ### setPrefix()
 
